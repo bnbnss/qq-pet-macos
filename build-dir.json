@@ -1,0 +1,18 @@
+{
+  "appId": "com.qqpet.desktop",
+  "productName": "QQ宠物",
+  "asar": false,
+  "directories": {
+    "output": "C:/Users/Administrator/Desktop/QQ宠物"
+  },
+  "files": [
+    "main.js",
+    "src/**/*",
+    "!src/**/node_modules",
+    "!**/*.map"
+  ],
+  "win": {
+    "icon": "resources/icon.png",
+    "target": "dir"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "name": "qq-pet-macos",
+  "version": "1.6.1",
+  "description": "QQ宠物 macOS 干净版 - 已移除遥测和设备指纹采集",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --mac",
+    "build:dmg": "electron-builder --mac dmg",
+    "build:zip": "electron-builder --mac zip",
+    "build:win": "electron-builder --win",
+    "build:win:nsis": "electron-builder --win nsis",
+    "build:win:portable": "electron-builder --win portable",
+    "build:linux": "electron-builder --linux",
+    "build:linux:appimage": "electron-builder --linux AppImage",
+    "build:linux:targz": "electron-builder --linux tar.gz"
+  },
+  "dependencies": {
+    "axios": "^1.3.4",
+    "crypto-js": "^4.1.1",
+    "electron-store": "^8.1.0",
+    "express": "^4.18.2",
+    "iconv-lite": "^0.6.3",
+    "node-rsa": "^2.0.0",
+    "node-xlsx": "^0.23.0",
+    "nodejs-websocket": "^1.7.2"
+  },
+  "author": "xuemian168",
+  "repository": "https://github.com/xuemian168/qqpet_automation",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "publish": null,
+    "appId": "com.qqpet.desktop",
+    "productName": "QQ宠物",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "src/**/*",
+      "!src/**/node_modules",
+      "!**/*.map"
+    ],
+    "mac": {
+      "category": "public.app-category.entertainment",
+      "icon": "resources/icon.png",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "win": {
+      "icon": "resources/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "resources/icon.png",
+      "category": "Game",
+      "artifactName": "qq-pet-${version}-${arch}.${ext}",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "tar.gz",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "resources/icon.ico",
+      "uninstallerIcon": "resources/icon.ico",
+      "installerHeaderIcon": "resources/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "QQ宠物"
+    },
+    "portable": {
+      "artifactName": "QQ宠物-${version}-portable.exe"
+    },
+    "dmg": {
+      "title": "QQ宠物 ${version}",
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}

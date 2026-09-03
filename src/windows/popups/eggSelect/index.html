@@ -1,0 +1,28 @@
+<div id="appMain">
+  <div class="egg-select-container not_drag">
+    <div class="egg-select-bg not_drag">
+      <div class="egg-select-title">请选择宠物蛋</div>
+      <div class="egg-select-eggs">
+        <div class="egg-card not_drag" :class="{selected: selected==='GG'}" @click="selectEgg('GG')">
+          <div class="egg-border not_drag">
+            <embed id="eggGG" name="eggGG" src="../assets/Action/GG/Egg/Stand.swf" quality="high" wmode="transparent" scale="showall" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" style="pointer-events:none;width:120px;height:150px;" />
+          </div>
+          <div class="egg-label">GG</div>
+        </div>
+        <div class="egg-card not_drag" :class="{selected: selected==='MM'}" @click="selectEgg('MM')">
+          <div class="egg-border not_drag">
+            <embed id="eggMM" name="eggMM" src="../assets/Action/MM/Egg/Stand.swf" quality="high" wmode="transparent" scale="showall" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" style="pointer-events:none;width:120px;height:150px;" />
+          </div>
+          <div class="egg-label">MM</div>
+        </div>
+      </div>
+      <div class="egg-select-btns not_drag">
+        <button class="egg-btn egg-btn-confirm not_drag" :disabled="!selected" @click="confirmSelect" v-show="!hatching">确定</button>
+        <button class="egg-btn egg-btn-close not_drag" @click="closeWindow" v-show="!hatching">返回</button>
+      </div>
+      <div class="egg-hatch-msg" v-if="hatching">
+        <div class="egg-hatch-text">正在孵化{{hatchSex}}宝宝...</div>
+      </div>
+    </div>
+  </div>
+</div>
