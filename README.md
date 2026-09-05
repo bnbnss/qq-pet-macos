@@ -1,6 +1,14 @@
-# QQ宠物 1.6.1 最终版
+# QQ秀桌面客户端 1.6.1 翻新版
 
-经典 QQ 宠物 Electron 桌面客户端，基于 Ruffle (Flash) 运行原始 SWF 动画，还原 2005 年的养宠体验。
+基于 QQ 秀的 Electron 桌面客户端，使用 Ruffle (Flash) 还原原始 SWF 资产，重现 2005 年经典体验。
+
+---
+
+# 👉 赞助作者 [赞助链接](https://ifdian.net/order/create?plan_id=cd98b76864a911f1b0e552540025c377&product_type=0&remark=&affiliate_code=) 👈
+
+**如果此项目帮助到你了，请作者喝杯咖啡！**
+
+---
 
 ## 功能一览
 
@@ -58,9 +66,3 @@ npx electron-builder --win dir
 - 若腾讯控股有限公司或其授权代理人认为本项目侵犯其合法权益，请通过 GitHub Issues 与作者联系，作者承诺第一时间下架本仓库及构建产物，绝不抗辩。
 
 **本项目与腾讯控股有限公司及其旗下产品无任何关联。QQ、QQ宠物及相关商标、标识版权归腾讯公司所有。**
-
-## 赞助
-
-如果此项目帮助到你了，请作者喝杯咖啡！
-
-[👉 点击赞助](https://ifdian.net/order/create?plan_id=cd98b76864a911f1b0e552540025c377&product_type=0&remark=&affiliate_code=)
